@@ -6,7 +6,7 @@ import swagger from '@elysiajs/swagger';
 const username = 'new_frontend_developer@wecanrace.it';
 const password = 'A_TUTTO_GAS_!';
 
-const api_key = "I'M_A_FRONTEND_DEVELOPER_AND_I_WANT_TO_JOIN_THE_TEAM"
+const api_key = "IM_A_FRONTEND_DEVELOPER_AND_I_WANT_TO_JOIN_THE_TEAM"
 
 
 const wrong_credentials = [
@@ -39,12 +39,13 @@ const server = new Elysia()
 
     .get('/', 'Welcome to the Challenge API of the new frontend developer of WeCanRace!')
 
+
     .group(
         '/auth',
         (app) => app
 
             .onBeforeHandle(async (ctx: Context & any) => {
-                if (ctx.request.headers['x-api-key'] !== api_key) {
+                if (ctx.headers['x-api-key'] !== api_key) {
                     ctx.set.status = 402;
                     return {
                         message: 'You don`t think you can access the API without the API key, do you?',
