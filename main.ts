@@ -149,6 +149,9 @@ const server = new Elysia()
                 detail: {
                     description: 'Register to the system',
                 },
+                headers: t.Object({
+                    'x-api-key': t.String(),
+                }),
                 body: t.Object({
                     name: t.String(),
                     lastname: t.String(),
