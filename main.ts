@@ -6,7 +6,7 @@ import swagger from '@elysiajs/swagger';
 const username = 'new_frontend_developer@wecanrace.it';
 const password = 'A_TUTTO_GAS_!';
 
-const api_key = "IM_A_FRONTEND_DEVELOPER_AND_I_WANT_TO_JOIN_THE_TEAM"
+const api_key = "I'M_A_FRONTEND_DEVELOPER_AND_I_WANT_TO_JOIN_THE_TEAM"
 
 
 const wrong_credentials = [
