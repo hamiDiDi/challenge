@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "start": "bun main.ts"
+    },
+    "dependencies": {
+        "@elysiajs/swagger":"^1.1.6",
+        "elysia": "^1.1.26"
+        }
+    }
