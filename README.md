@@ -17,8 +17,12 @@ docker run -d -p 3030:3030 wcr-challenge
 ```
 
 
-### Credentials
+### Usage and Docs
+Please visit [http://localhost:3030/docs](http://localhost:3030/docs)
 
+
+
+### Credentials
 API KEY:
 ```plain
 I'M_A_FRONTEND_DEVELOPER_AND_I_WANT_TO_JOIN_THE_TEAM
