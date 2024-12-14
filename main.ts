@@ -1,6 +1,6 @@
 import { Elysia, t, Context } from 'elysia';
+import { cors } from '@elysiajs/cors'
 import swagger from '@elysiajs/swagger';
-
 
 
 const username = 'new_frontend_developer@wecanrace.it';
@@ -19,6 +19,7 @@ const wrong_credentials = [
 
 const server = new Elysia()
 
+    .use(cors())
 
     .use(swagger({
         documentation: {
