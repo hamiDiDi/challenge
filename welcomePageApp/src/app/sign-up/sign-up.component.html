@@ -1,0 +1,49 @@
+<mat-card class="sign-up-form">
+  <mat-card-title class="form-title">Create Your Account</mat-card-title>
+  <form class="form-body" (ngSubmit)="onRegister()">
+    <!-- Full Name -->
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Full Name</mat-label>
+      <input [(ngModel)]="name" name="name" type="text" required />
+    </mat-form-field>
+
+    <!-- Email -->
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Email</mat-label>
+      <input [(ngModel)]="email" name="email" type="email" required />
+    </mat-form-field>
+
+    <!-- Password -->
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Password</mat-label>
+      <input [(ngModel)]="password" name="password" type="password" required />
+    </mat-form-field>
+
+    <!-- Confirm Password -->
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Confirm Password</mat-label>
+      <input
+        [(ngModel)]="repassword"
+        name="repassword"
+        type="password"
+        required
+      />
+    </mat-form-field>
+
+    <!-- Sign Up Button -->
+    <button mat-raised-button color="primary" class="submit-btn">
+      <mat-icon>person_add</mat-icon> Sign Up
+    </button>
+  </form>
+
+  <!-- Social Sign Up Options -->
+  <div class="sso-buttons">
+    <button mat-button color="accent" class="google-btn">
+      <mat-icon>login</mat-icon> Sign up with Google
+    </button>
+
+    <button mat-button color="primary" class="facebook-btn">
+      <mat-icon>login</mat-icon> Sign up with Facebook
+    </button>
+  </div>
+</mat-card>

@@ -1,0 +1,31 @@
+<mat-card class="login-card">
+  <mat-card-title>Login</mat-card-title>
+
+  <form (ngSubmit)="onLogin()" class="login-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [(ngModel)]="email" name="email" required />
+    </mat-form-field>
+ker
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input [(ngModel)]="password" name="password" type="password" required />
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" color="primary" class="login-button">
+      Login
+    </button>
+    <p *ngIf="message">{{ message }}</p>
+    <p *ngIf="error" style="color: red;">{{ error }}</p>
+  </form>
+
+  <div class="sso-buttons">
+    <button mat-button color="accent" class="google-btn">
+      <mat-icon>login</mat-icon> Login with Google
+    </button>
+
+    <button mat-button color="primary" class="facebook-btn">
+      <mat-icon>login</mat-icon> Login with Facebook
+    </button>
+  </div>
+</mat-card>

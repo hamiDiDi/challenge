@@ -1,0 +1,7 @@
+{
+  "name": "welcomePageApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
