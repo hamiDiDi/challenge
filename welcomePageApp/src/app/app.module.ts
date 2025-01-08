@@ -1,7 +1,7 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-import { HomePage } from './home/home.page'
+import { HomePage } from './home/home.page';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HomePageModule } from './home/home.module';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -37,8 +38,8 @@ import { HomePageModule } from './home/home.module';
     FormsModule,
     CommonModule,
     HomePage,
-    HomePageModule
-    
+    HomePageModule,
+    AppRoutingModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

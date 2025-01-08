@@ -1,9 +1,37 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Welcome to Our App</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
- <router-outlet></router-outlet>
-</ion-content>
+    <ion-toolbar>
+      <ion-title>Welcome to Our App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <div id="container" class="container">
+      <mat-tab-group class="mat-tab-group" animationDuration="500ms">
+        <!-- Tab for Sign Up -->
+        <mat-tab label="Sign Up">
+          <div class="tab-content">
+            <p class="tab-description">Join us today! It's quick and easy.</p>
+            <button mat-raised-button color="primary" [routerLink]="'/sign-up'">
+              Go to Sign Up
+            </button>
+          </div>
+        </mat-tab>
+  
+        <!-- Tab for Login -->
+        <mat-tab label="Login">
+          <div class="tab-content">
+            <p class="tab-description">Already a member? Log in to continue.</p>
+            <button mat-raised-button color="accent" [routerLink]="'/login'">
+              Go to Login
+            </button>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+  
+      <!-- Routed Components -->
+      <div class="router-container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </ion-content>
+  
